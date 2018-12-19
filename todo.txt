@@ -1,0 +1,2 @@
+[] - Completely Dockerize
+[] - Get a frontend to POST activities
