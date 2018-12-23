@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./src/server.js",
     "docker-build": "docker build ./",
-    "db": "node db"
+    "db": "node db",
+    "asset-watch": "parcel watch client/main.js --out-dir build"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "babel-jest": "^23.6.0",
     "jest": "^23.6.0",
     "parcel-bundler": "^1.11.0",
-    "regenerator-runtime": "^0.13.1"
+    "regenerator-runtime": "^0.13.1",
+    "supertest": "^3.3.0"
   }
 }
