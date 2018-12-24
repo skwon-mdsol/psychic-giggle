@@ -1,3 +1,4 @@
 [] - Completely Dockerize
 [] - Get a frontend to POST activities
 [] - Setup basic frontend
+[] - babel setup for jest

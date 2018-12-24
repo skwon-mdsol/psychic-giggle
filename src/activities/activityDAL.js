@@ -14,6 +14,6 @@ class ActivityDAL {
   create (params) {
     return this.model.create(params);
   }
-};
+}
 
 module.exports = ActivityDAL;

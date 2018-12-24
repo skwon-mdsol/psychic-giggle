@@ -14,6 +14,7 @@ const sequelize = new Sequelize('graphql_prac', 'skwon', '', {
 });
 
 // use authenticate to check if connection is working
+/*
 const testDb = async () => {
   try {
     await sequelize.authenticate();
@@ -23,5 +24,6 @@ const testDb = async () => {
     return;
   }
 }
+*/
 
 module.exports = sequelize;
