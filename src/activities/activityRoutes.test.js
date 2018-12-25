@@ -15,28 +15,20 @@ describe('activityRoutes', () => {
     ActivityDAL.mockClear();
   });
 
-  it('returns all activities for /activities', (done) => {
-    return request(app)
+  it('returns all activities for /activities', async () => {
+    await request(app)
       .get('/activities')
       .set('Accept', 'application/json')
-      .expect(200)
-      .end((err, res) => {
-        if (err) return done(err);
-        const activityDALInstance = ActivityDAL.mock.instances[0];
-        expect(activityDALInstance.all).toBeCalled();
-        done();
-      });
+      .expect(200);
+
+    expect(ActivityDAL.mock.instances[0].all).toBeCalled();
   });
 
-  it('creates an activity for /activities', (done) => {
-    return request(app)
+  it('creates an activity for /activities', async () => {
+    await request(app)
       .post('/activities')
-      .expect(200)
-      .end((err, res) => {
-        if (err) return done(err);
-        const activityDALInstance = ActivityDAL.mock.instances[0];
-        expect(activityDALInstance.create).toBeCalled();
-        done();
-      });
+      .expect(200);
+
+    expect(ActivityDAL.mock.instances[0].create).toBeCalled();
   });
 });

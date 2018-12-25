@@ -1,5 +1,11 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-export default () => {
-  return <div><span>Hello World</span></div>;
+class App extends React.Component {
+  render () {
+    return <div>Hullo World</div>;
+  }
 }
+
+const mainContainer = document.getElementById('main');
+ReactDOM.render(<App />, mainContainer);
